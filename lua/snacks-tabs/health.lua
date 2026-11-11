@@ -11,7 +11,10 @@ M.check = function()
     if Snacks.picker.config.get().sources.tabs then
         vim.health.ok("tabs source is registered")
     else
-        vim.health.warn("tabs source is not registered", { 'call require("snacks-tabs").setup() or add require("snacks-tabs").source to snacks picker sources' })
+        vim.health.warn(
+            "tabs source is not registered",
+            { 'call require("snacks-tabs").setup() or add require("snacks-tabs").source to snacks picker sources' }
+        )
     end
 end
 

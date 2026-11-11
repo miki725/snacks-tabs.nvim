@@ -1,0 +1,10 @@
+# Git hooks run by prek (https://prek.j178.dev), a drop-in pre-commit replacement.
+#
+#   prek install                 # once per clone: install the pre-commit shim
+#   prek run --all-files         # run against the whole tree
+repos:
+  - repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v2.6.0
+    hooks:
+      # downloads the release binary so no rust toolchain is needed
+      - id: stylua-github
