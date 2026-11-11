@@ -1,0 +1,32 @@
+*snacks-tabs.txt*  Tab page picker for snacks.nvim
+
+==============================================================================
+CONTENTS                                                *snacks-tabs*
+
+Adds a `tabs` source to the snacks.nvim picker.
+
+    :lua Snacks.picker.tabs()
+
+==============================================================================
+SETUP                                                   *snacks-tabs-setup*
+
+                                                        *snacks-tabs.setup()*
+require("snacks-tabs").setup({opts})
+    Registers the `tabs` source. {opts} is merged into the source, so any
+    snacks picker config (title, layout, win keys, ...) can be overridden.
+
+                                                        *snacks-tabs.source*
+require("snacks-tabs").source
+    The source table, for adding to `opts.picker.sources` in snacks.nvim
+    without calling setup().
+
+==============================================================================
+KEYS                                                    *snacks-tabs-keys*
+
+    <CR>    switch to the tab
+    <c-x>   close the selected tab(s) from the input
+    dd      close the selected tab(s) from the list
+
+The last remaining tab is never closed.
+
+ vim:tw=78:ts=8:ft=help:norl:
